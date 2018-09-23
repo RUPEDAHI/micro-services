@@ -3,5 +3,5 @@ ARG source
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:83
 EXPOSE 83
-COPY ${source:-obj/Docker/publish} .
+COPY ${source:-dockerPublish} .
 ENTRYPOINT ["dotnet", "CoreAppWithDocker.dll"]
